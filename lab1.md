@@ -1,6 +1,6 @@
 # Lab 1 Lab Report
 
-Share an example of using the command with no arguments.
+**Share an example of using the command with no arguments.**
 * `cd`: `cd`
 
 When this command was run, the working directory is `/home/lecture1`. There was no output, but after the command was run, the working directory changes to `/home`
@@ -14,7 +14,7 @@ not an error.
 When this command was run, the working directory is `/home/lecture1/`. 
 
 
-Share an example of using the command with a path to a directory as an argument.
+**Share an example of using the command with a path to a directory as an argument.**
 * `cd`: `cd messages`
 
 When this command was run, the working directory is `/home/lecture1/`. There is no output, but the working directory changes from `/home/lecture1` to `/home/lecture1/messages`.
@@ -27,7 +27,7 @@ When this command was run, the working directory is `/home/lecture1/`. The outpu
 When this command was run, the working directory is `/home/lecture1`. This results in an error because `cat` only takes an argument that is a file and it doesn't 
 accept a directory. Thus, the output is an error: `cat: messages: Is a directory`. 
 
-Share an example of using the command with a path to a file as an argument.
+**Share an example of using the command with a path to a file as an argument.**
 * `cd`: `cd Hello.java`
 
 When this command was run, the working directory is `/home/lecture1/`. This command results in an error because the argument that is passed in, `Hello.java`, is not a 
