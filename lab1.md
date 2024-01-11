@@ -3,6 +3,7 @@
 ## **Share an example of using the command with no arguments.**
 * `cd`: `cd`
 ![Image](cd1.png)
+
 When this command was run, the working directory is `/home/lecture1`. There was no output, but after the command was run, the working directory changes to `/home`
 This is because there was no argument passed into `cd`, so it goes back to the root directory. The output is not an error. 
 * `ls`: `ls`
