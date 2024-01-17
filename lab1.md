@@ -14,7 +14,7 @@ not an error.
 * `cat`: `cat`
 ![Image](cat1.png)
 
-When this command was run, the working directory is `/home/lecture1/`. 
+When this command was run, the working directory is `/home/lecture1/`. Because we passed in no arguments to `cat`, it reads from the terminal since it doesn't have any file to read. Thus, when you type something the `cat` command just outputs whatever you type. The output is not an error. 
 
 
 ## **Share an example of using the command with a path to a directory as an argument.**
@@ -47,6 +47,9 @@ directory and `cd` only accepts files as arguments. Thus, the output is an error
 
 When this command was run, the working directory is `/home/lecture1/`. 
 * `cat`: `cat Hello.java`
+
+
+
 
 
 
