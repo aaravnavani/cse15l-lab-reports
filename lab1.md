@@ -45,8 +45,11 @@ directory and `cd` only accepts files as arguments. Thus, the output is an error
 * `ls`: `ls Hello.java`
 ![Image](ls3.png)
 
-When this command was run, the working directory is `/home/lecture1/`. 
+When this command was run, the working directory is `/home/lecture1/`. The output is just `Hello.java` because `ls` prints out all the files in the current working directory. Because a file is passed in as the argument of the `ls` command, it just prints the file name (`Hello.java` in this case). The output is not an error. 
+
 * `cat`: `cat Hello.java`
+![Image](cat3.png)
+When this command was run, the working directory is `/home/lecture1/`. The output is the contents of `Hello.java` because `cat` prints out the content of a file that is passed in. The output is not an error. 
 
 
 
