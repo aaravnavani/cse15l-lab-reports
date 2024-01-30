@@ -99,11 +99,11 @@ Other fields that change from this specific request are `user` and `message`, as
 Other fields that change are the `parameters` array the `values` array as well as the `message` variable and the `messages` array. 
 In this case, the new message that is passed in is added to the end of the `messages` list, which already has the first message that was created in the first URL request. 
 
-![Image](second.png)
-
 ## Part 2
 
 ### The absolute path to the private key for your SSH key
+
+
 
 ### The absolute path to the public key for your SSH key for logging into ieng6
 
