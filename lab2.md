@@ -62,3 +62,7 @@ In this case, the new message that is passed in is added to the end of the `mess
 ### The absolute path to the public key for your SSH key for logging into ieng6
 
 ### A terminal interaction where you log into your ieng6 account without being asked for a password.
+
+## Part 3
+
+I didn't know about the ssh key and how there is both the private and public ssh key. I learned that the public key is kept in the server while the private key is kept with the client. I also didn't know that the ssh key could be used to not enter the password everytime you try to connect to the remote server.
