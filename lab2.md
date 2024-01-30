@@ -103,13 +103,13 @@ In this case, the new message that is passed in is added to the end of the `mess
 
 ### The absolute path to the private key for your SSH key
 
-![Image](private.png)
+![Image](private_key.png)
 
 
 
 ### The absolute path to the public key for your SSH key for logging into ieng6
 
-![Image](public.png)
+![Image](public_key.png)
 
 
 ### A terminal interaction where you log into your ieng6 account without being asked for a password.
