@@ -32,7 +32,7 @@ It properly returns the reverse of [0,0,0,0] which is the array [0,0,0,0].
 
 The symptom is that the method clears the array instead of reversing it. 
 
-![Symptom](lab3-1.jpg)
+![Symptom](lab3-1.png)
 
 
 ### The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
