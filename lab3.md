@@ -60,34 +60,62 @@ static int[] reversed(int[] arr) {
 ## Part 2 - Researching Commands
 
 ### Option 2: Find (finding all directories) 
+  
+#### Example 1: ```find ./technical -type d```
 
-#### Example 1: ```find ./cse15l-lab-reports -type d```
-
-This finds all the directories in the cse15l folder: 
-
+This is the output of the command: 
 ```
-./cse15l-lab-reports
-./cse15l-lab-reports/.git
-./cse15l-lab-reports/.git/objects
-./cse15l-lab-reports/.git/objects/pack
-./cse15l-lab-reports/.git/objects/info
-./cse15l-lab-reports/.git/info
-./cse15l-lab-reports/.git/logs
-./cse15l-lab-reports/.git/logs/refs
-./cse15l-lab-reports/.git/logs/refs/heads
-./cse15l-lab-reports/.git/logs/refs/remotes
-./cse15l-lab-reports/.git/logs/refs/remotes/origin
-./cse15l-lab-reports/.git/hooks
-./cse15l-lab-reports/.git/refs
-./cse15l-lab-reports/.git/refs/heads
-./cse15l-lab-reports/.git/refs/tags
-./cse15l-lab-reports/.git/refs/remotes
-./cse15l-lab-reports/.git/refs/remotes/origin
+./technical
+./technical/government
+./technical/government/About_LSC
+./technical/government/Env_Prot_Agen
+./technical/government/Alcohol_Problems
+./technical/government/Gen_Account_Office
+./technical/government/Post_Rate_Comm
+./technical/government/Media
+./technical/plos
+./technical/biomed
+./technical/911report
 ```
 
-#### Example 2: ```find ./cse15l-lab-reports -type f -name "*.py"```
+This lists out all directories that are in the technical folder. 
 
-This finds all python files in the ```cse15l-lab-reports``` folder: 
+
+#### Example 2: ```find ./technical/911report -type f -name "*.txt"```
+
+This finds all txt files in the ```cse15l-lab-reports``` folder: 
+
+```
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-13.1.txt
+./technical/911report/chapter-13.2.txt
+./technical/911report/chapter-13.3.txt
+./technical/911report/chapter-3.txt
+./technical/911report/chapter-2.txt
+./technical/911report/chapter-1.txt
+./technical/911report/chapter-5.txt
+./technical/911report/chapter-6.txt
+./technical/911report/chapter-7.txt
+./technical/911report/chapter-9.txt
+./technical/911report/chapter-8.txt
+./technical/911report/preface.txt
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+```
+
+This finds all the text files (of type `.txt`) in the `/technical/` directory. 
+
+### Example 3: ```find ./technical -type f -name "*.txt" -exec rm {} \;```
+
+This command finds all .txt files in the `/technical` folder and deletes them (using the `rm` command). When I go into the `/technical/911report/` there are no `.txt` files. 
+
+### Example 4: ```find ./technical -type d -exec chmod 755 {} \;```
+
+This command finds all directiories in the `/.technical` directory and sets their permissions to 755, which means that the owner can read, write, and edit but others can 
+read and execute. 
+
 
 
 
