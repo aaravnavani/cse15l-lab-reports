@@ -1,6 +1,6 @@
 # Lab 3 Report 
 
-## Part 1 
+## Part 1 - Bugs
 
 ### A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
 
@@ -56,3 +56,38 @@ static int[] reversed(int[] arr) {
     return newArray;
   }
 ```
+
+## Part 2 - Researching Commands
+
+### Option 2: Find (finding all directories) 
+
+#### Example 1: ```find ./cse15l-lab-reports -type d```
+
+This finds all the directories in the cse15l folder: 
+
+```
+./cse15l-lab-reports
+./cse15l-lab-reports/.git
+./cse15l-lab-reports/.git/objects
+./cse15l-lab-reports/.git/objects/pack
+./cse15l-lab-reports/.git/objects/info
+./cse15l-lab-reports/.git/info
+./cse15l-lab-reports/.git/logs
+./cse15l-lab-reports/.git/logs/refs
+./cse15l-lab-reports/.git/logs/refs/heads
+./cse15l-lab-reports/.git/logs/refs/remotes
+./cse15l-lab-reports/.git/logs/refs/remotes/origin
+./cse15l-lab-reports/.git/hooks
+./cse15l-lab-reports/.git/refs
+./cse15l-lab-reports/.git/refs/heads
+./cse15l-lab-reports/.git/refs/tags
+./cse15l-lab-reports/.git/refs/remotes
+./cse15l-lab-reports/.git/refs/remotes/origin
+```
+
+#### Example 2: ```find ./cse15l-lab-reports -type f -name "*.py"```
+
+This finds all python files in the ```cse15l-lab-reports``` folder: 
+
+
+
