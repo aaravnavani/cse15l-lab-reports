@@ -114,6 +114,9 @@ This finds all the text files (of type `.txt`) in the `/technical/` directory.
 
 This command finds all .txt files in the `/technical` folder and deletes them (using the `rm` command). When I go into the `/technical/911report/` there are no `.txt` files. 
 
+![Example 2](lab3-2.png)
+
+
 ### Example 4: ```find ./technical -type d -exec chmod 755 {} \;```
 
 This command finds all directiories in the `/.technical` directory and sets their permissions to 755, which means that the owner can read, write, and edit but others can 
