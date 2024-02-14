@@ -64,6 +64,7 @@ and `String.join`.
 
 ### What are the relevant arguments to those methods, and the values of any relevant fields of the class?
 
+In the `ChatHandler` class, the relevant field is the `messages` arraylist that stores the chat messages. 
 In ```handleRequest```, the relevant argument is the url that is passed in. Other methods like `getPath`, `getQuery`, `isEmpty` take no arguments. The method `.equals` takes in
 the string that is being compared. The method `.split` takes in the character it should be split by (`&` in our case). The `.add` takes in the element that should be added to the 
 list (the formatted string) and `String.join` takes in the new line character and the messages list and adds a line after each individual message. 
