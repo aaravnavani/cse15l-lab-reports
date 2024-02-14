@@ -2946,4 +2946,4 @@ Source Used: Linuxize
 
 This command finds all empty files within the `/.technical` directory. It outputs nothing in this case because there are no empty files.
 
-Source Used: Geeksforgeekes
+Source Used: Geeksforgeeks
