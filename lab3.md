@@ -83,6 +83,7 @@ This is the output of the command:
 
 This lists out all directories that are in the technical folder. 
 
+Source Used: Linuxize
 
 #### Example 2: ```find ./technical/911report -type f -name "*.txt"```
 
@@ -110,11 +111,17 @@ This finds all txt files in the ```cse15l-lab-reports``` folder:
 
 This finds all the text files (of type `.txt`) in the `/technical/` directory. 
 
+Source Used: Linuxize
+
+
 ### Example 3: ```find ./technical -type f -name "*.txt" -exec rm {} \;```
 
 This command finds all .txt files in the `/technical` folder and deletes them (using the `rm` command). When I go into the `/technical/911report/` there are no `.txt` files. 
 
 ![Example 2](lab3-2.png)
+
+Source Used: Linuxize
+
 
 
 ### Example 4: ```find ./technical -type d -exec chmod 755 {} \;```
@@ -123,6 +130,9 @@ This command finds all directiories in the `/.technical` directory and sets thei
 read and execute. 
 
 There is no output on the terminal. 
+
+Source Used: Linuxize
+
 
 ### Example 5: find ./technical -type f -mtime -7
 
@@ -1521,9 +1531,14 @@ This command finds all the files and subdirectories within the `/.technical` dir
 ./technical/911report/chapter-10.txt
 ./technical/911report/chapter-11.txt
 ```
+
+Source Used: Linuxize
+
 ### Example 6: ```find ./technical -type d -mtime +30```
 
 This command finds all the directories within the `/.technical` directory that were modified more than 30 days ago. The output is nothing as there was no file that was modified more than 30 days ago. 
+
+Source Used: Linuxize
 
 ### Example 7: ```find ./technical -type f -size -1M``` 
 
@@ -2923,7 +2938,10 @@ This finds all the files smaller than 1MB. Here is the output:
 ./technical/911report/chapter-11.txt
 ```
 
+Source Used: Linuxize
+
 ### Step 8: ```find ./technical -type f -empty```
 
 This command finds all empty files within the `/.technical` directory. It outputs nothing in this case because there are no empty files.
 
+Source Used: Linuxize
