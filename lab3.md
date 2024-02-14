@@ -111,7 +111,7 @@ This finds all txt files in the ```cse15l-lab-reports``` folder:
 
 This finds all the text files (of type `.txt`) in the `/technical/` directory. 
 
-Source Used: Linuxize
+Source Used: Geeksforgeeks
 
 
 ### Example 3: ```find ./technical -type f -name "*.txt" -exec rm {} \;```
@@ -2944,4 +2944,4 @@ Source Used: Linuxize
 
 This command finds all empty files within the `/.technical` directory. It outputs nothing in this case because there are no empty files.
 
-Source Used: Linuxize
+Source Used: Geeksforgeekes
