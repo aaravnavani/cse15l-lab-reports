@@ -29,3 +29,24 @@ I then pressed ```<up>``` 17 more times to get to the ```java -cp .:lib/hamcrest
 the tester file. 
 
 ## Step 7
+
+I press ```vim ListExamples.java```, ```<enter>```, ```43```, ```<enter>```, ```e```, ```r2```, ```:wq!```, ```<enter>```. 
+The vim command was used to open ```ListExamples.java``` in the vim editor. 
+I then used ```43``` and ```<enter>``` to jump to 43rd line. 
+I then pressed ```e``` to get to the end of the word and then ```r2``` to replace the 1 with 2. Then ```:wq!``` and ```<enter>``` to save the changes. 
+
+![Image]
+
+## Step 8
+
+![Image]
+
+Key pressed: ```<up>```,```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<enter>``` and then ```<up>```,```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<enter>```
+
+The ```javac -cp.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java``` was 6 up in the terminal commands history and I used this command to compile the java files. I then use ```java -cp.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests``` to run the tester. 
+
+## Step 9
+
+![Image]
+
+I pressed ```git add ListExamples.java <enter>```, ```git commit -m "update list examples file"```, ```<enter>```, ```git push```. This adds the changes from ```ListExamples.java```, stages those changes, commits those changes with the commit message, and then pushes it to the repository.  
