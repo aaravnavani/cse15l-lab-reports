@@ -2,20 +2,20 @@
 
 ## Step 4
 
-![Image] 
+![Symptom](lab4-1.png)
 
 For this, I just ran ```ssh anavani@ieng6.ucsd.edu <Enter>``` to ssh into the ieng6 server. 
 
 ## Step 5
 
-![Image]
+![Symptom](lab4-2.png)
 
 This clones the forked lab7 repo into the ieng6 home directory. For this, the keys pressed was ```git clone https://github.com/aaravnavani/lab7 <Enter> ```  
 
 
 ## Step 6
 
-![Image]
+![Symptom](lab4-3.png)
 
 Here are the keys pressed: 
 ```cd lab7 <Enter>```
@@ -35,7 +35,7 @@ The vim command was used to open ```ListExamples.java``` in the vim editor.
 I then used ```43``` and ```<enter>``` to jump to 43rd line. 
 I then pressed ```e``` to get to the end of the word and then ```r2``` to replace the 1 with 2. Then ```:wq!``` and ```<enter>``` to save the changes. 
 
-![Image]
+![Symptom](lab4-4.png)
 
 ## Step 8
 
@@ -47,6 +47,6 @@ The ```javac -cp.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java``` was 6
 
 ## Step 9
 
-![Image]
+![Symptom](lab4-6.png)
 
 I pressed ```git add ListExamples.java <enter>```, ```git commit -m "update list examples file"```, ```<enter>```, ```git push```. This adds the changes from ```ListExamples.java```, stages those changes, commits those changes with the commit message, and then pushes it to the repository.  
