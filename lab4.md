@@ -47,6 +47,6 @@ The ```javac -cp.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java``` was 6
 
 ## Step 9
 
-![Symptom](lab4-4.png)
+![Symptom](lab4-6.png)
 
 I pressed ```git add ListExamples.java <enter>```, ```git commit -m "update list examples file"```, ```<enter>```, ```git push```. This adds the changes from ```ListExamples.java```, stages those changes, commits those changes with the commit message, and then pushes it to the repository.  
