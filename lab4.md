@@ -39,7 +39,7 @@ I then pressed ```e``` to get to the end of the word and then ```r2``` to replac
 
 ## Step 8
 
-![Image]
+![Symptom](lab4-5.png)
 
 Key pressed: ```<up>```,```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<enter>``` and then ```<up>```,```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<enter>```
 
