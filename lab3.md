@@ -68,7 +68,7 @@ static int[] reversed(int[] arr) {
 
 ## Using ```-name```
 
-#### Example 1: find ./technical/911report -type f -name "*.png"
+#### Example 1: ```find ./technical/911report -type f -name "*.png"```
 
 This finds all txt files in the ```911report``` folder in the technical folder. 
 
