@@ -65,7 +65,9 @@ static int[] reversed(int[] arr) {
 ## Part 2 - Researching Commands
 
 ### Option 2: Find (finding all directories) 
-  
+
+## Using ```-type```
+
 #### Example 1: ```find ./technical -type d```
 
 This is the output of the command: 
@@ -115,6 +117,7 @@ This finds all the text files (of type `.txt`) in the `/technical/` directory.
 
 Source Used: Geeksforgeeks
 
+## Using -exec
 
 ### Example 3: ```find ./technical -type f -name "*.txt" -exec rm {} \;```
 
@@ -123,8 +126,6 @@ This command finds all .txt files in the `/technical` folder and deletes them (u
 ![Example 2](lab3-2.png)
 
 Source Used: Linuxize
-
-
 
 ### Example 4: ```find ./technical -type d -exec chmod 755 {} \;```
 
@@ -135,8 +136,9 @@ There is no output on the terminal.
 
 Source Used: Linuxize
 
+## Using -mtime
 
-### Example 5: find ./technical -type f -mtime -7
+### ```find ./technical -type f -mtime -7```
 
 This command finds all the files and subdirectories within the `/.technical` directory that were modified in the last 7 days. Here is the output: 
 
@@ -168,13 +170,15 @@ This command finds all the files and subdirectories within the `/.technical` dir
 
 Source Used: Linuxize
 
-### Example 6: ```find ./technical -type d -mtime +30```
+### ```find ./technical -type d -mtime +30```
 
 This command finds all the directories within the `/.technical` directory that were modified more than 30 days ago. The output is nothing as there was no file that was modified more than 30 days ago. 
 
 Source Used: Linuxize
 
-### Example 7: ```find ./technical -type f -size -1M``` 
+## Using Size
+
+### ```find ./technical -type f -size -1M``` 
 
 This finds all the files smaller than 1MB. Here is the output: 
 
@@ -206,8 +210,67 @@ This finds all the files smaller than 1MB. Here is the output:
 
 Source Used: Linuxize
 
-### Step 8: ```find ./technical -type f -empty```
+### ```find ./technical -type f -size -10M```
+
+This finds all the files smaller than 10MB in the technical directory. Here is the output: 
+
+```
+./technical/government/About_LSC/LegalServCorp_v_VelazquezSyllabus.txt
+./technical/government/About_LSC/Progress_report.txt
+./technical/government/About_LSC/Strategic_report.txt
+./technical/government/About_LSC/Comments_on_semiannual.txt
+./technical/government/About_LSC/Special_report_to_congress.txt
+./technical/government/About_LSC/CONFIG_STANDARDS.txt
+./technical/government/About_LSC/commission_report.txt
+./technical/government/About_LSC/LegalServCorp_v_VelazquezDissent.txt
+./technical/government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt
+./technical/government/About_LSC/LegalServCorp_v_VelazquezOpinion.txt
+./technical/government/About_LSC/diversity_priorities.txt
+./technical/government/About_LSC/reporting_system.txt
+./technical/government/About_LSC/State_Planning_Report.txt
+./technical/government/About_LSC/Protocol_Regarding_Access.txt
+./technical/government/About_LSC/ODonnell_et_al_v_LSCdecision.txt
+./technical/government/About_LSC/conference_highlights.txt
+./technical/government/About_LSC/State_Planning_Special_Report.txt
+./technical/government/Env_Prot_Agen/multi102902.txt
+./technical/government/Env_Prot_Agen/section-by-section_summary.txt
+./technical/government/Env_Prot_Agen/jeffordslieberm.txt
+./technical/government/Env_Prot_Agen/final.txt
+./technical/government/Env_Prot_Agen/ctf7-10.txt
+./technical/government/Env_Prot_Agen/ctf1-6.txt
+./technical/government/Env_Prot_Agen/ro_clear_skies_book.txt
+./technical/government/Env_Prot_Agen/ctm4-10.txt
+./technical/government/Env_Prot_Agen/1-3_meth_901.txt
+./technical/government/Env_Prot_Agen/atx1-6.txt
+./technical/government/Env_Prot_Agen/tech_sectiong.txt
+./technical/government/Env_Prot_Agen/bill.txt
+./technical/government/Env_Prot_Agen/nov1.txt
+./technical/government/Env_Prot_Agen/tech_adden.txt
+./technical/government/Alcohol_Problems/Session2-PDF.txt
+./technical/government/Alcohol_Problems/Session3-PDF.txt
+./technical/government/Alcohol_Problems/DraftRecom-PDF.txt
+./technical/government/Alcohol_Problems/Session4-PDF.txt
+.
+.
+.
+./technical/911report/chapter-7.txt
+./technical/911report/chapter-9.txt
+./technical/911report/chapter-8.txt
+./technical/911report/preface.txt
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+```
+
+## Using Empty 
+
+### ```find ./technical -type f -empty```
 
 This command finds all empty files within the `/.technical` directory. It outputs nothing in this case because there are no empty files.
 
 Source Used: Geeksforgeeks
+
+
+### ```find ./technical -type d -empty``` 
+
+This command lists all empty directories within the `/.technical` directory. It also outputs nothing in this case because there are no empty directories. 
