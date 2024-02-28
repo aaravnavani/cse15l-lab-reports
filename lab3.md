@@ -66,26 +66,13 @@ static int[] reversed(int[] arr) {
 
 ### Option 2: Find (finding all directories) 
 
-## Using ```-type```
+## Using ```-name```
 
-#### Example 1: ```find ./technical -type d```
+#### find ./technical/911report -type f -name "*.png"
 
-This is the output of the command: 
-```
-./technical
-./technical/government
-./technical/government/About_LSC
-./technical/government/Env_Prot_Agen
-./technical/government/Alcohol_Problems
-./technical/government/Gen_Account_Office
-./technical/government/Post_Rate_Comm
-./technical/government/Media
-./technical/plos
-./technical/biomed
-./technical/911report
-```
+This finds all txt files in the ```911report``` folder in the technical folder. 
 
-This lists out all directories that are in the technical folder. 
+There is no output for this command as there are no png files.
 
 Source Used: Linuxize
 
