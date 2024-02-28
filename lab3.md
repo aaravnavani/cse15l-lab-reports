@@ -68,7 +68,7 @@ static int[] reversed(int[] arr) {
 
 ## Using ```-name```
 
-#### find ./technical/911report -type f -name "*.png"
+#### Example 1: find ./technical/911report -type f -name "*.png"
 
 This finds all txt files in the ```911report``` folder in the technical folder. 
 
@@ -106,7 +106,7 @@ Source Used: Geeksforgeeks
 
 ## Using -exec
 
-### Example 3: ```find ./technical -type f -name "*.txt" -exec rm {} \;```
+### Example 1: ```find ./technical -type f -name "*.txt" -exec rm {} \;```
 
 This command finds all .txt files in the `/technical` folder and deletes them (using the `rm` command). When I go into the `/technical/911report/` there are no `.txt` files. 
 
@@ -114,7 +114,7 @@ This command finds all .txt files in the `/technical` folder and deletes them (u
 
 Source Used: Linuxize
 
-### Example 4: ```find ./technical -type d -exec chmod 755 {} \;```
+### Example 2: ```find ./technical -type d -exec chmod 755 {} \;```
 
 This command finds all directiories in the `/.technical` directory and sets their permissions to 755, which means that the owner can read, write, and edit but others can 
 read and execute. 
@@ -125,7 +125,7 @@ Source Used: Linuxize
 
 ## Using -mtime
 
-### ```find ./technical -type f -mtime -7```
+### Example 1: ```find ./technical -type f -mtime -7```
 
 This command finds all the files and subdirectories within the `/.technical` directory that were modified in the last 7 days. Here is the output: 
 
@@ -157,7 +157,7 @@ This command finds all the files and subdirectories within the `/.technical` dir
 
 Source Used: Linuxize
 
-### ```find ./technical -type d -mtime +30```
+### Example 2: ```find ./technical -type d -mtime +30```
 
 This command finds all the directories within the `/.technical` directory that were modified more than 30 days ago. The output is nothing as there was no file that was modified more than 30 days ago. 
 
@@ -165,7 +165,7 @@ Source Used: Linuxize
 
 ## Using Size
 
-### ```find ./technical -type f -size -1M``` 
+### Example 1: ```find ./technical -type f -size -1M``` 
 
 This finds all the files smaller than 1MB. Here is the output: 
 
@@ -197,7 +197,7 @@ This finds all the files smaller than 1MB. Here is the output:
 
 Source Used: Linuxize
 
-### ```find ./technical -type f -size -10M```
+### Example 2: ```find ./technical -type f -size -10M```
 
 This finds all the files smaller than 10MB in the technical directory. Here is the output: 
 
@@ -251,13 +251,13 @@ This finds all the files smaller than 10MB in the technical directory. Here is t
 
 ## Using Empty 
 
-### ```find ./technical -type f -empty```
+### Example 1: ```find ./technical -type f -empty```
 
 This command finds all empty files within the `/.technical` directory. It outputs nothing in this case because there are no empty files.
 
 Source Used: Geeksforgeeks
 
 
-### ```find ./technical -type d -empty``` 
+### Example 2: ```find ./technical -type d -empty``` 
 
 This command lists all empty directories within the `/.technical` directory. It also outputs nothing in this case because there are no empty directories. 
