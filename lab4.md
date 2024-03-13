@@ -10,7 +10,7 @@ For this, I just ran ```ssh anavani@ieng6.ucsd.edu <Enter>``` to ssh into the ie
 
 ![Symptom](lab4-2.png)
 
-This clones the forked lab7 repo into the ieng6 home directory. For this, the keys pressed was ```git clone https://github.com/aaravnavani/lab7.git <Enter> ```  
+This clones the forked lab7 repo into the ieng6 home directory. For this, the keys pressed was ```git clone git@github.com:aaravnavani/lab7.git <Enter> <Enter>```  
 
 
 ## Step 6
@@ -23,10 +23,7 @@ Here are the keys pressed:
 ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```
 ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```
 
-I did ```cd lab7``` in order to go into the lab7 directory. I then did ```ls``` to check the directories inside the ```lab7``` folder. I then pressed ```<up>``` 17 times 
-to get to the ```javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java```, which compiled all the .java files. 
-I then pressed ```<up>``` 17 more times to get to the ```java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests```, which runs
-the tester file. 
+I did ```cd lab7``` in order to go into the lab7 directory. I then did ```ls``` to check the directories inside the ```lab7``` folder. I then did ```vim test.sh``` to view the file, then ```:wq! <Enter>``` to exit vim. Then I ran, ```bash test.sh``` to run the tester file. 
 
 ## Step 7
 
