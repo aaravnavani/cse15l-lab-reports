@@ -32,7 +32,9 @@ Let me know if you are able to fix the issue!
 
 ### 3.Clear Description of Bug & Screenshot 
 
-Screenshot: 
+Screenshot showing what the student gets from running the command: 
+
+ 
 
 The bug is that the student does not check whether ```shouldBeUser[0]``` is equal to ```user``` and if ```shouldBeMessage[0]``` is equal to ```message```. 
 
