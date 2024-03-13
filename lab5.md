@@ -14,7 +14,10 @@ javac ChatServer.java Server.java
 java ChatServer 8000
 ```
 
-I am not really sure why this is, so I would appreciate it if someone could help me in sorting out this issue.
+ ![Symptom](lab5-1.png)
+
+
+I am not really sure why I'm facing this weird behavior, so I would appreciate it if someone could help me in sorting out this issue.
 
 
 ### 2. TA Response 
