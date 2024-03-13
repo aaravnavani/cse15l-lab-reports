@@ -209,3 +209,7 @@ class ChatServer {
 }
 ```
 
+## Part 2: Reflection
+
+Some cool things that I learned was how ```grep``` works and how it is really powerful in fidning files based on a specific criteria. I feel like this would be really useful in industry when dealing with a large codebase. Another thing that I found really useful was using ```curl```. I was able to use ```curl``` for testing some api calls and it worked really well and was easy enough for me to do, without having to set up a whole new python or java file. Overall, I learned a lot and I will be using the stuff that I learned in class when working on various projects as well as in industry. 
+
