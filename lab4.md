@@ -10,7 +10,7 @@ For this, I just ran ```ssh anavani@ieng6.ucsd.edu <Enter>``` to ssh into the ie
 
 ![Symptom](lab4-2.png)
 
-This clones the forked lab7 repo into the ieng6 home directory. For this, the keys pressed was ```git clone https://github.com/aaravnavani/lab7 <Enter> ```  
+This clones the forked lab7 repo into the ieng6 home directory. For this, the keys pressed was ```git clone https://github.com/aaravnavani/lab7.git <Enter> ```  
 
 
 ## Step 6
