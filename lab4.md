@@ -41,10 +41,10 @@ Finally, I did ```:wq!``` and ```<enter>``` to save the changes to the file and 
 
 Key pressed: ```<up>```,```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<enter>``` and then ```<up>```,```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<up>```, ```<enter>```
 
-The ```javac -cp.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java``` was 6 up in the terminal commands history and I used this command to compile the java files. I then use ```java -cp.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests``` to run the tester. 
+I then use ```bash test.sh``` to run the tester file. 
 
 ## Step 9
 
 ![Symptom](lab4-6.png)
 
-I pressed ```git add ListExamples.java <enter>```, ```git commit -m "update list examples file"```, ```<enter>```, ```git push```. This adds the changes from ```ListExamples.java```, stages those changes, commits those changes with the commit message, and then pushes it to the repository.  
+I pressed ```git add ListExamples.java <enter>```, ```git commit -m "update list examples file"```, ```<enter>```, ```git push```. This adds the changes from ```ListExamples.java```, stages those changes, commits those changes with the commit message, and then pushes it to the remote repository.  
