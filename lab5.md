@@ -24,6 +24,188 @@ Could you also verify that you are verifying the value of `shouldBeUser[0]` and 
 
 Let me know if you are able to fix the issue! 
 
+### 3.Clear Description of Bug & Screenshot 
 
+Screenshot: 
 
+The bug is that the student does not check whether ```shouldBeUser[0]``` is equal to ```user``` and if ```shouldBeMessage[0]``` is equal to ```message```. 
+
+### 4. All the Information 
+
+#### The file & directory structure needed
+
+```
+├── ChatHistoryReader.java
+├── ChatServer.java
+├── HandlerTests.java
+└── Server.java
+```
+
+#### The contents of each file before fixing the bug
+
+Contents of ```ChatServer.java```:
+
+```
+import java.io.IOException;
+import java.net.URI;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
+class ChatHandler implements URLHandler {
+  String chatHistory = "";
+
+  public String handleRequest(URI url) {
+    // expect /chat?user=<name>&message=<string>
+    if (url.getPath().equals("/chat")) {
+      String[] params = url.getQuery().split("&");
+      String[] shouldBeUser = params[0].split("=");
+      String[] shouldBeMessage = params[1].split("=");
+      String user = shouldBeUser[1];
+      String message = shouldBeMessage[1];
+      this.chatHistory += user + ": " + message + "\n\n";
+      return this.chatHistory;
+    }
+    // expect /retrieve-history?file=<name>
+    else if (url.getPath().equals("/retrieve-history")) {
+      String[] params = url.getQuery().split("&");
+      String[] shouldBeFile = params[0].split("=");
+      if (shouldBeFile[0].equals("file")) {
+        String fileName = shouldBeFile[1];
+        // String fileName = shouldBeFileName[0]; // bug4: should be shouldBeFile[1]
+        ChatHistoryReader reader = new ChatHistoryReader();
+        try {
+          String[] contents = reader.readFileAsArray("chathistory/" + fileName);
+          for (String line : contents) {
+            this.chatHistory += line + "\n\n";
+          }
+        } catch (IOException e) {
+          System.err.println("Error reading file: " + e.getMessage());
+        }
+      }
+      return this.chatHistory;
+    }
+    // expect /save?name=<name>
+    else if (url.getPath().equals("/save")) {
+      String[] params = url.getQuery().split("&");
+      String[] shouldBeFileName = params[0].split("=");
+      if (shouldBeFileName[0].equals("name")) {
+        File directory = new File("chathistory");
+        File file = new File(directory, shouldBeFileName[1]);
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+          writer.write(this.chatHistory);
+          return "Data written to " + shouldBeFileName[1] + "in 'chat-history' folder.";
+        } catch (IOException e) {
+          e.printStackTrace();
+          return "Error: Something wrong happen during file save, check StackTrace";
+        }
+      }
+    }
+
+    return this.chatHistory;
+  }
+}
+
+class ChatServer {
+  public static void main(String[] args) throws IOException {
+    int port = Integer.parseInt(args[0]);
+    Server.start(port, new ChatHandler());
+  }
+}
+```
+
+#### A description of what to edit to fix the bug
+
+The student must add this line: 
+
+```if (shouldBeUser[0].equals("user") && shouldBeMessage[0].equals("message")) {```
+
+at the very start of the ```handleRequest``` method to verify the ```shouldBeUser[0]``` and ```shouldBeMessage[0]``` variables.  
+
+The student also needs to add: 
+
+```
+else {
+        return "Invalid parameters: " + String.join("&", params);
+      }
+```
+
+right after the ```return this.chatHistory``` line so that if invalid parameters are given, the user is told. 
+
+Here is the updated code:
+
+```
+import java.io.IOException;
+import java.net.URI;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
+class ChatHandler implements URLHandler {
+  String chatHistory = "";
+
+  public String handleRequest(URI url) {
+
+    // expect /chat?user=<name>&message=<string>
+    if (url.getPath().equals("/chat")) {
+      String[] params = url.getQuery().split("&");
+      String[] shouldBeUser = params[0].split("=");
+      String[] shouldBeMessage = params[1].split("=");
+      if (shouldBeUser[0].equals("user") && shouldBeMessage[0].equals("message")) {
+        String user = shouldBeUser[1];
+        String message = shouldBeMessage[1];
+        this.chatHistory += user + ": " + message + "\n\n";
+        return this.chatHistory;
+      } else {
+        return "Invalid parameters: " + String.join("&", params);
+      }
+    }
+    // expect /retrieve-history?file=<name>
+    else if (url.getPath().equals("/retrieve-history")) {
+      String[] params = url.getQuery().split("&");
+      String[] shouldBeFile = params[0].split("=");
+      if (shouldBeFile[0].equals("file")) {
+        String fileName = shouldBeFile[1];
+        ChatHistoryReader reader = new ChatHistoryReader();
+        try {
+          String[] contents = reader.readFileAsArray("chathistory/" + fileName);
+          for (String line : contents) {
+            this.chatHistory += line + "\n\n";
+          }
+        } catch (IOException e) {
+          System.err.println("Error reading file: " + e.getMessage());
+        }
+      }
+      return this.chatHistory;
+    }
+    // expect /save?name=<name>
+    else if (url.getPath().equals("/save")) {
+      String[] params = url.getQuery().split("&");
+      String[] shouldBeFileName = params[0].split("=");
+      if (shouldBeFileName[0].equals("name")) {
+        File directory = new File("chathistory");
+        File file = new File(directory, shouldBeFileName[1]);
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+          writer.write(this.chatHistory);
+          return "Data written to " + shouldBeFileName[1] + "in 'chat-history' folder.";
+        } catch (IOException e) {
+          e.printStackTrace();
+          return "Error: Something wrong happen during file save, check StackTrace";
+        }
+      }
+    }
+
+    return this.chatHistory;
+  }
+}
+
+class ChatServer {
+  public static void main(String[] args) throws IOException {
+    int port = Integer.parseInt(args[0]);
+    Server.start(port, new ChatHandler());
+  }
+}
+```
 
