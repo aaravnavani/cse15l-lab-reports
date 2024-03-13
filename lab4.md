@@ -29,8 +29,9 @@ I did ```cd lab7``` in order to go into the lab7 directory. I then did ```ls``` 
 
 I press ```vim ListExamples.java```, ```<enter>```, ```42j```, ```<down>```, ```<right> <right>```, ```e```, ```r2```, ```:wq!```, and ```<enter>```. 
 The vim command was used to open ```ListExamples.java``` in the vim editor. 
-I then used ```43``` and ```<enter>``` to jump to 43rd line. 
-I then pressed ```e``` to get to the end of the word and then ```r2``` to replace the 1 with 2. Then ```:wq!``` and ```<enter>``` to save the changes. 
+I then used ```42j``` and ```<enter>``` to jump to 42nd line. 
+I then pressed ```<down>``` and ```<right>``` twice to get to the first character of the line that needs changes. Then I pressed ```e``` to get to the end of the line and ```r2``` to replace 1 with 2.
+Finally, I did ```:wq!``` and ```<enter>``` to save the changes to the file and exit vim.
 
 ![Symptom](lab4-4.png)
 
