@@ -34,7 +34,7 @@ Let me know if you are able to fix the issue!
 
 Screenshot showing what the student gets from running the command: 
 
- 
+ ![Symptom](lab5.png)
 
 The bug is that the student does not check whether ```shouldBeUser[0]``` is equal to ```user``` and if ```shouldBeMessage[0]``` is equal to ```message```. 
 
