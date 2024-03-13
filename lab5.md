@@ -6,9 +6,15 @@
 
 Hello,
 
-I've been working on the ```ChatServer.java``` file, and I've noticed some weird behavior. Even if I don't pass in the parameter with `user=` or `message=`, the code still works and adds the message to the chat history and displays the message on the website. I am not really sure why this is, so I would appreciate it if someone could help me in sorting out this issue.
+I've been working on the ```ChatServer.java``` file, and I've noticed some weird behavior. Even if I don't pass in the parameter with `user=` or `message=`, the code still works and adds the message to the chat history and displays the message on the website. I am running this ```run.sh``` file on the terminal using ```bash run.sh```:
 
-*insert screenshot here*
+```
+#!/bin/bash
+javac ChatServer.java Server.java
+java ChatServer 8000
+```
+
+I am not really sure why this is, so I would appreciate it if someone could help me in sorting out this issue.
 
 
 ### 2. TA Response 
@@ -212,4 +218,3 @@ class ChatServer {
 ## Part 2: Reflection
 
 Some cool things that I learned was how ```grep``` works and how it is really powerful in fidning files based on a specific criteria. I feel like this would be really useful in industry when dealing with a large codebase. Another thing that I found really useful was using ```curl```. I was able to use ```curl``` for testing some api calls and it worked really well and was easy enough for me to do, without having to set up a whole new python or java file. Overall, I learned a lot and I will be using the stuff that I learned in class when working on various projects as well as in industry. 
-
